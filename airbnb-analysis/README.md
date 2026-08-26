@@ -1,8 +1,12 @@
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![Dataset](https://img.shields.io/badge/Dataset-42k%20listings-green)
+
 # 🏠 Análise de Dados — Airbnb na cidade de São Paulo
 
 O Airbnb se consolidou como uma das maiores plataformas de hospitalidade do mundo, conectando viajantes a anfitriões em mais de 220 países e regiões — sem possuir um único hotel. Recentemente, a empresa ultrapassou a marca de 1,5 bilhão de hóspedes recebidos desde sua fundação, com mais de 8 milhões de imóveis ativos e receita anual superior a US$ 12 bilhões.
 
-No Brasil, São Paulo se destaca como um dos mercados mais dinâmicos da plataforma na América Latina. Neste notebook, fazemos uma análise exploratória e modelagem preditiva sobre os anúncios do Airbnb no município de São Paulo, utilizando dados públicos do [Inside Airbnb](http://insideairbnb.com/get-the-data.html) (recorte de julho/2026).
+No Brasil, São Paulo se destaca como um dos mercados mais dinâmicos da plataforma na América Latina. Neste notebook, fazemos uma análise exploratória e modelagem preditiva sobre os anúncios do Airbnb no município de São Paulo, utilizando dados públicos do Inside Airbnb (recorte de julho/2026).
 
 O projeto percorre todo o fluxo de um problema de ciência de dados: **limpeza e tratamento de dados → análise exploratória (EDA) → visualização geográfica → modelagem preditiva de preços (Machine Learning supervisionado) → segmentação de mercado (Machine Learning não supervisionado)**.
 
@@ -38,6 +42,18 @@ O projeto percorre todo o fluxo de um problema de ciência de dados: **limpeza e
 12. **Mapa coroplético** — preço mediano por bairro
 13. **Clusterização (K-Means)** — segmentação da cidade em "micro-mercados" por perfil de localização, preço e capacidade
 
+## 📈 Key Findings
+
+| Métrica | Valor |
+|---|---|
+| Anúncios analisados | 42.354 |
+| Variáveis selecionadas | 24 / 90 |
+| Preço médio | R$ 376 |
+| Preço mediano | R$ 320 |
+| R² (Random Forest) | 0.54 |
+| MAE (preço) | R$ 101 |
+| Clusters identificados | 5 |
+
 ## 📊 Principais insights
 
 **Visão geral do mercado**
@@ -65,6 +81,7 @@ A cidade foi dividida em 5 clusters que revelam perfis de consumo distintos — 
 - **Dados geoespaciais:** `geopandas`, `folium`
 - **Machine Learning:** `scikit-learn` (Regressão Linear, Random Forest, K-Means, pré-processamento e métricas)
 - **Interpretabilidade de modelos:** `shap`
+- - **Visualizações interativas:** mapas com `folium`, scatter interativo com `plotly`
 
 ## ▶️ Como executar
 
